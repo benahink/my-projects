@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    border: 0;
+}
+
+.main-container {
+    background-image: url('./images/violin.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.key-container {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: repeat(5, 100px);
+}
+
+#key {
+    background: rgb(255, 255, 255, 0.6);
+    height: 90px;
+    width: 90px;
+    margin: 5px;
+    margin-top: 50px;
+    margin-left: 40px;
+}
