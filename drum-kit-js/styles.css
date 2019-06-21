@@ -3,6 +3,8 @@
     border: 0;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
+
 body {
     height: auto;
 }
@@ -24,20 +26,28 @@ body {
     padding: 10px;
 }
 
-#key {
+.key {
     background: rgb(255, 255, 255, 0.6);
     height: 100px;
     width: 100px;
     text-align: center;
     font-size: 70px;
     color: #ffffff;
+    transition: all 0.2s;
+}
+
+.playing {
+    transform: scale(0.8);
+    border: 2px solid palevioletred;
+    box-shadow: 0 0 5px palevioletred;
 }
 
 .footer {
-    height: auto;
+    height: 100%;
     font-size: 30px; 
+    font-family: 'Open Sans Condensed', sans-serif;    
     color: #ffffff;
     background: black;
-    height: 10vh;
+    height: auto;
     text-align: center;
 }
