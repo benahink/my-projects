@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    border: 0;
+}
+
+.clock {
+    height: 275px;
+    width: 275px;
+    border: palevioletred 10px solid;
+    border-radius: 50%;
+    position: relative;
+    margin: 20px 20% 20px 0;
+    margin-left: 20%;
+}
+
+.hand {
+    width: 50%;
+    height: 8px;
+    border-radius: 40%;
+    background: purple;
+    position: absolute;
+    top: 50%;
+    transition: all 0.05s;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition-timing-function: cubic-bezier(0, 3.26, 0.58, 1);
+}
+
+.seconds-hand {
+    height: 5px;
+}
+
+.header {
+    height: auto;
+    font-size: 30px;
+    background: black;
+    color: #ffffff;
+    text-align: center;
+}
