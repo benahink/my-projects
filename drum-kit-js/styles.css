@@ -3,23 +3,41 @@
     border: 0;
 }
 
+body {
+    height: auto;
+}
+
 .main-container {
-    background-image: url('./images/violin.jpeg');
+    background-image: url('./images/piano.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
+    height: auto;
+    width: auto;
 }
 
 .key-container {
     display: grid;
     grid-template-columns: 100px 100px 100px;
     grid-template-rows: repeat(5, 100px);
+    grid-gap: 5px;
+    align-content: center;
 }
 
 #key {
     background: rgb(255, 255, 255, 0.6);
-    height: 90px;
-    width: 90px;
+    height: 100px;
+    width: 100px;
     margin: 5px;
     margin-top: 50px;
-    margin-left: 40px;
+    text-align: center;
+    align-content: center;
+    font-size: 70px;
+    color: #ffffff;
+}
+
+.footer {
+    height: auto;
+    font-size: 30px; 
+    color: #ffffff;
+    background: black;
 }
