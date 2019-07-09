@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap');
+
+.title {
+    display: inline-block;
+    font-family: 'DM Serif Display', serif;
+    width: 100%;
+    height: 8vh;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.title span {
+    font-family: 'Courgette', cursive;
+}
+
+.main-container {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('images/background-2.jpeg')center/cover no-repeat;
+}
+
+.images {
+    /* background: #f30149; */
+    flex: 0 0 65%;
+    min-height: 70vh;
+    background: url('images/giraffe-0.jpeg')center/cover no-repeat;
+    border-radius: 10px;
+    box-shadow: 5px 10px #0B0930;
+    position: relative;
+}
+
+.btn {
+    display: inline-block;
+    background: white;
+    color: black;
+    border: 3px solid #2C2A89;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    padding: 0.5rem;
+    box-shadow: 2px 5px #0B0930;
+    outline: none;
+}
+
+.prevBtn {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.nextBtn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+.btn:active {
+    background: #453AA4;
+    box-shadow: 1px 1px #453AA4;
+}
+
+.btn:hover {
+    background: #2C2A89;
+    color: aliceblue;
+}
