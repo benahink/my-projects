@@ -5,15 +5,13 @@
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
 
-body {
-    height: auto;
-}
-
 .main-container {
     background-image: url('./images/piano.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 90vh;
+    justify-content: center;
+    align-content: center;
 }
 
 .key-container {
@@ -21,9 +19,9 @@ body {
     grid-template-columns: 100px 100px 100px;
     grid-template-rows: repeat(3, 100px);
     grid-gap: 5px;
-    justify-content: center;
-    align-content: center;
-    padding: 10px;
+    position: relative;
+    top: 25%;
+    left: 30%;
 }
 
 .key {
@@ -43,11 +41,10 @@ body {
 }
 
 .footer {
-    height: 100%;
+    height: 10vh;
     font-size: 30px; 
     font-family: 'Open Sans Condensed', sans-serif;    
     color: #ffffff;
     background: black;
-    height: auto;
     text-align: center;
 }
