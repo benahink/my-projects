@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator {
+    flex: 0 0 97%;
+}
+
+.title {
+    width: 100%;
+    background: #67678f;
+    font-size: 4rem;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.screen {
+    width: 100%;
+    font-size: 7rem;
+    padding: 0.5rem;
+    background: #292938;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s linear;
+}
+
+.numbers {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    transition: all 0.3s linear;
+}
+
+.operators {
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.5s linear;
+}
+
+.functions {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    flex: 0 0 33.33%;
+    border: 1px solid black;
+    padding: 0.25rem 0;
+    transition: all .9s ease;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: blue;
+}
+
+.btn-operators {
+    background: white;
+    color: black;
+    border: 0.5px solid gray;
+    flex: 0 0 20%;
+}
+
+.btn-numbers {
+    background: #e0e0e0;
+    border: 0.5px solid gray;
+}
+
+.btn, .btn-equal, .btn-clear, .btn-exponent, .btn-erase {
+    font-size: 4rem;
+    padding: 3px;
+    border: 1px solid gray;
+}
+
+.btn-equal {
+    background: green;
+}
+
+.btn-clear {
+    background: red;
+}
+
+.btn-erase {
+    background: #e09a04
+}
