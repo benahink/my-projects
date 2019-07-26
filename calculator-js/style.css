@@ -61,7 +61,8 @@ body {
 
 button {
     flex: 0 0 33.33%;
-    border: 1px solid black;
+    border: 1px solid #1d1d27;;
+    color: #1d1d27;
     padding: 0.25rem 0;
     transition: all .9s ease;
     border: none;
@@ -74,7 +75,7 @@ button:hover {
 
 .btn-operators {
     background: white;
-    color: black;
+    color: #1d1d27;
     border: 0.5px solid gray;
     flex: 0 0 20%;
 }
