@@ -58,7 +58,9 @@ class ChatPage extends Component {
                     )
                 })}
                 </div> 
-                <h3>{this.props.user.username}</h3>
+                <div className="area">
+                    <h3 className="chatpage-username">{this.props.user.username}</h3>
+                </div>
                 <div className='the-form'>
                     <form className='form-layout' onSubmit={this.handleSubmit}>
                         <FormGroup controlId="message">
