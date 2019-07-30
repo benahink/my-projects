@@ -47,11 +47,12 @@ body {
     transform: rotate(180deg)
 }
 
-.lander1 {
+.lander > h1 {
+    font-family: 'Atomic Age', cursive;
     background-color: rgb(150, 149, 149, 0.1);
 }
 
-.logout .lander1 {
+.logout .lander {
     /* padding: 15vh 0; */
     text-align: center;
 }
@@ -77,19 +78,52 @@ h1 {
     text-align: center;
 }
 
-.home .lander h1 {
+.home .lander1 {
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
 }
 
-.home .lander p {
+.home .landerp {
     color: #999;
 }
 
-.image-alien{
+/* .image-alien {
     margin: 0pt 0pt 0pt 0pt;
-    width: 30%;
-}
+} */
+
+.image-alien {
+    width: 60%;
+    height: 400px;
+    width: 400px;
+    background-color: #6c82e4;
+    animation: 
+      pulse 3s ease infinite alternate, 
+      nudge 5s linear infinite alternate;
+    border-radius: 100%;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      background-color: #6c82e4;
+    }
+    50% {
+      background-color: rgb(101, 214, 66);
+    }
+  }
+  
+  @keyframes nudge {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    
+    50% {
+      transform: translate(150px, 0);
+    }
+    
+    80% {
+      transform: translate(-150px, 0);
+    }
+  }
 
 .lander{
     background-color: rgb(150, 149, 149, 0.1);

@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react';
+import alien from '../images/alien.png'
 import './Login.css';
 
 class Home extends Component {
@@ -8,7 +9,7 @@ class Home extends Component {
             <div className="home">
                 <div className="lander">
                     <h1>Welcome Home</h1>
-                    <img className='image-alien' src='https://i.imgur.com/adDEPRg.png' alt="#"></img>
+                    <img className='image-alien' src={alien} alt="#"></img>
                 </div>
             </div>
         );
