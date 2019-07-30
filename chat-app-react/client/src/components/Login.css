@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Atomic Age', cursive;
+    font-size: 3rem;
+    margin: 0 3rem;
+}
+
+.signup {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    text-align: center;   
+}
+
+.form-control {
+    height: 3rem;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#username {
+    width: 50vw;
+}
+
+#password {
+    width: 50vw;
+}
+
+.image-alien {
+    margin: 0pt 0pt 0pt 0pt;
+    width: 30%;
+    transition: transform 0.8s ease-in; 
+}
+
+.image-alien:hover {
+    /* background-image:  */
+    transform: rotate(180deg)
+}
+
+.lander1 {
+    background-color: rgb(150, 149, 149, 0.1);
+}
+
+.logout .lander1 {
+    /* padding: 15vh 0; */
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.btn-block {
+    font-size: 2rem;
+    border-radius: 5px;
+}
+
+.btn-block:hover {
+    background-color: rgb(150, 149, 149);
+    color: whitesmoke;
+}
+
+/* home page css  */
+.home .lander {
+    padding: 15vh 0;
+    text-align: center;
+}
+
+.home .lander h1 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+}
+
+.home .lander p {
+    color: #999;
+}
+
+.image-alien{
+    margin: 0pt 0pt 0pt 0pt;
+    width: 30%;
+}
+
+.lander{
+    background-color: rgb(150, 149, 149, 0.1);
+}
+
+/* end home page css */
+
+/* chat page css */
+.chat-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sent-messages{
+    display: flex;
+    flex-direction: column;
+    border: 1pt solid black;
+    border-radius: 8px;
+    width: 65%;
+    height: 40vh;
+    overflow: auto;
+    background-color:rgb(153, 153, 153, 0.2);;
+}
+
+.the-form {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.form-control {
+    width: 5rem;
+}
+
+.form-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#message{
+    width: 50vw;
+    margin: 0px 10px 10px 0px;   
+}
+
+.the-button-container {
+    align-content: center;
+    width: 8rem;
+}
+
+.the-button{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 3rem;
+    border-radius: 12px;
+    border: 1pt solid black;
+    background-color: rgb(245, 245, 245);
+    color: rgb(89, 89, 89);
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.the-button:hover{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 40pt;
+    border-radius: 12px;
+    border: 1pt solid black;
+    color: black;
+    font-size: 20pt;
+    text-align: center;
+}
+
+.chat-interface{
+    display: flex;
+    flex-direction: row;
+}
+
+.username{
+    margin: 5pt 7pt 5pt 7pt;
+    padding: 3pt 2pt 3pt 0pt;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+.the-message{
+    margin: 5pt 7pt 5pt 7pt;
+    padding: 4pt 7pt 3pt 7pt;
+    width: 66%;
+    background-color: rgba(255, 187, 241, 0.434);
+    border-radius: 12px;
+    word-wrap: break-word;
+}
+
+.the-message:hover{
+    margin: 5pt 7pt 5pt 7pt;
+    padding: 4pt 7pt 3pt 7pt;
+    /* width: 66%; */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7),rgba(255, 187, 241, 0.9));
+    border-radius: 12px;
+    word-wrap: break-word;
+}
+
+h3 {
+    margin: 5pt 0pt 5pt 0pt;
+}
+
+@media only screen and (min-width: 700px) {
+    .the-message{
+        margin: 5pt 7pt 5pt 7pt;
+        padding: 4pt 7pt 3pt 7pt;
+        width: auto;
+        background-color: rgba(255, 187, 241, 0.434);
+        border-radius: 12px;
+        word-wrap: break-word;
+    }
+}
+/* end chat page css */
+
+/* navbar css */
+* {
+    margin: 0;
+    border: 0;
+}
+
+.navbar {
+    font-weight: bold;
+    margin: 0pt 0pt 0pt 5px;
+    font-family: 'Atomic Age', cursive;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 5px;
+    margin: 2rem 3rem;
+}
+
+.navbar-buttons {
+    padding: 0.5rem 0.7rem;
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-buttons:hover {
+    box-shadow: 6px 9px rgb(153, 153, 153, 0.5);;
+    border-radius: 5px;
+}
+/* end navbar css */

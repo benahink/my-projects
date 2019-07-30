@@ -1,6 +1,6 @@
 const express = require("express");
 const chatRouter = express.Router();
-const Chat = require("../models/chat.js");
+const Chat = require("../models/chatSchema.js");
 
 chatRouter.get("/", (req, res, next) => {
     Chat.find({user: req.user._id}, (err, chats) => {
@@ -30,9 +30,7 @@ chatRouter.get("/:chatId", (req, res, next) => {
         if (err) {
             res.status(500);
             return next(err);
-        }
-
-        if (!chat) {
+        } else if (!chat) {
             res.status(404);
             return next(new Error("no chat found"))
         }

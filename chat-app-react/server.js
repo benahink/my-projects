@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = 4040;
+const PORT = process.env.PORT || 4040;
 require("dotenv").config();
 const mongoose = require('mongoose');
 const expressJwt = require("express-jwt");
@@ -9,7 +9,7 @@ app.use(express.json());
 
 app.use("/", require("./userRouter"));
 
-mongoose.connect("mongodb://localost:27017//chat-ap", {userNewUrlParser: true})
+mongoose.connect("mongodb://localhost:27017/chatapp", { useCreateIndex: true, useNewUrlParser: true})
 .then(() => console.log('connected to database'))
 .catch(err => console.log(err));
 
@@ -31,7 +31,7 @@ app.listen(PORT, () => {
 });
 
 const express2 = require("express");
-const app2 = express();
+const app2 = express2();
 
 server = app2.listen(4050, () => {
     console.log("server is running on 5050")
@@ -40,8 +40,8 @@ server = app2.listen(4050, () => {
 const socket = require("socket.io");
 io = socket(server);
 
-io.connect("connection", (socket) => {
-    console.log(socket.id);
+io.on("connection", (socket) => {
+    console.log("socket io id", socket.id);
     socket.on("SEND_MESSAGE", (data) => {
         io.emit("RECEIVE_MESSAGE", data);
     })

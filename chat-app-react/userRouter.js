@@ -2,7 +2,7 @@ const express = require("express");
 const userRouter = express.Router();
 const user = require("./models/user.js");
 
-userRouter.router("/")
+userRouter.route("/")
 .post((req, res) => {
     const newUser = new user(req.body);
     newUser.save((err, new_user) => {

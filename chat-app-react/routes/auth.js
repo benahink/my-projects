@@ -1,47 +1,47 @@
 const express = require("express");
-const User =  require("../models/user");
+const User =  require("../models/user.js");
 const authRouter = express.Router();
 const jwt = require("jsonwebtoken");
+// const 
 
 authRouter.post("/signup", (req, res, next) => {
-    User.findOne({username: req.body.username}, (err, existingUser) => {
+    User.findOne({ username: req.body.username }, (err, existingUser) => {
         if (err) {
             res.status(500);
             return next(err);
-        }
-
-        if (existingUser !== null) {
+        } else if (existingUser !== null) {
             res.status(400);
-            return next(new Error("That username already exists."));
+            return next(new Error("That username already exists!"));
         }
-
         const newUser = new User(req.body);
         newUser.save((err, user) => {
-            if (err) {
-                res.status(500);
-                return next(err);
-            }
-
-            const token = jwt.sign(user.toObject(), process.env.SECRET);
-            return res.status(201).send({success: true, user: user.toObject(), token: token})
+            if (err) return res.status(500).send({success: false, err});
+            const token = jwt.sign(user.withoutPassword(), process.env.SECRET);
+            return res.status(201).send({ user: user.withoutPassword(), token });
         });
     });
 });
 
 authRouter.post("/login", (req, res, next) => {
-    User.findOne({username: req.body.usrname.toLowerCase()}, (err, user) => {
+    console.log(req.body)
+    User.findOne({ username: req.body.username.toLowerCase() }, (err, user) => {
         if (err) {
+            console.log("first")
+            res.status(500);
             return next(err);
-        }
-
-        if (!user || user.password !== req.body.password) {
+        } else if (!user) {
             res.status(403);
-            return next(new Error("Email anod/or password incorrect."))
+            return next(new Error("Username or password are incorrect"));
         }
+        user.checkPassword(req.body.password, (err, match) => {
+            console.log("second")
+            if (err) return res.status(500).send(err);
 
-        const token = jwt.sign(user.toObject(), process.env.SECRET);
-        return res.send({token: token, user: user.toObject(), sucess: true})
-    })
+            if (!match) res.status(401).send({ message: "Username or password are incorrect" });
+            const token = jwt.sign(user.withoutPassword(), process.env.SECRET);
+            return res.send({ user: user.withoutPassword(), token })
+        });
+    });
 })
 
 module.exports = authRouter;
